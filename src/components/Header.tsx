@@ -21,13 +21,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-forest-light rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               <span className="text-primary-foreground font-serif font-bold text-lg">FT</span>
             </div>
-            <span className="text-xl font-serif font-semibold text-foreground">Fancy Tents</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-serif font-semibold text-gradient-forest">Fancy Tents</span>
+              <span className="text-xs text-muted-foreground -mt-1">Luxury Rentals</span>
+            </div>
           </Link>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -41,9 +44,19 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Only */}
-          <div className="hidden lg:flex">
-            <Button variant="default" size="lg">
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-1">
+                <Phone className="w-4 h-4" />
+                <span>(555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Mail className="w-4 h-4" />
+                <span>hello@fancytents.com</span>
+              </div>
+            </div>
+            <Button variant="luxury" size="lg">
               Get Quote
             </Button>
           </div>
@@ -74,7 +87,15 @@ const Header = () => {
               </Link>
             ))}
             <div className="px-4 py-2 space-y-2">
-              <Button variant="default" size="lg" className="w-full mt-2">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="w-4 h-4" />
+                <span>(555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Mail className="w-4 h-4" />
+                <span>hello@fancytents.com</span>
+              </div>
+              <Button variant="luxury" size="lg" className="w-full mt-2">
                 Get Quote
               </Button>
             </div>
