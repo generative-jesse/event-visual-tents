@@ -8,11 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "/" },
     { name: "Tents", href: "/tents" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -24,10 +20,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-forest-light rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               <span className="text-primary-foreground font-serif font-bold text-lg">FT</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-serif font-semibold text-gradient-forest">Fancy Tents</span>
-              <span className="text-xs text-muted-foreground -mt-1">Luxury Rentals</span>
-            </div>
+            <span className="text-xl font-serif font-semibold text-gradient-forest">Fancy Tents</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,20 +37,11 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-1">
-                <Phone className="w-4 h-4" />
-                <span>(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Mail className="w-4 h-4" />
-                <span>hello@fancytents.com</span>
-              </div>
-            </div>
-            <Button variant="luxury" size="lg">
-              Get Quote
+          {/* CTA */}
+          <div className="hidden md:flex items-center">
+            <Button variant="luxury" className="px-6 py-2">
+              <span className="font-medium">Rent</span>
+              <span className="ml-1 font-medium">Tent</span>
             </Button>
           </div>
 
@@ -86,17 +70,10 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="px-4 py-2 space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                <span>(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4" />
-                <span>hello@fancytents.com</span>
-              </div>
-              <Button variant="luxury" size="lg" className="w-full mt-2">
-                Get Quote
+            <div className="px-4 py-2">
+              <Button variant="luxury" className="w-full">
+                <span className="font-medium">Rent</span>
+                <span className="ml-1 font-medium">Tent</span>
               </Button>
             </div>
           </nav>
