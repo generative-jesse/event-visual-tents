@@ -62,13 +62,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom Sophisticated Colors
-				'charcoal-deep': 'hsl(var(--charcoal-deep))',
-				'charcoal-light': 'hsl(var(--charcoal-light))',
-				'warm-gray': 'hsl(var(--warm-gray))',
-				'cool-gray': 'hsl(var(--cool-gray))',
-				'neutral-light': 'hsl(var(--neutral-light))',
-				'neutral-soft': 'hsl(var(--neutral-soft))'
+				// Custom Luxury Colors
+				'forest-deep': 'hsl(var(--forest-deep))',
+				'forest-light': 'hsl(var(--forest-light))',
+				'gold-light': 'hsl(var(--gold-light))',
+				'gold-dark': 'hsl(var(--gold-dark))',
+				'cream-warm': 'hsl(var(--cream-warm))',
+				'cream-soft': 'hsl(var(--cream-soft))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
