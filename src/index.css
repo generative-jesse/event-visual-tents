@@ -50,11 +50,10 @@
     --neutral-light: 0 0% 96%;
     --neutral-soft: 220 7% 94%;
 
-    /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--charcoal-light)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--warm-gray)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--charcoal-light) / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--neutral-soft)));
+    /* Clean Professional Styling - No Gradients */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.1);
 
     /* Shadows - Luxury Depth */
     --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.2);
@@ -140,35 +139,27 @@
 }
 
 @layer components {
-  /* Sophisticated Button Variants */
-  .btn-luxury {
-    @apply bg-gradient-to-r from-primary to-charcoal-light text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-luxury hover:shadow-elegant hover:scale-105;
+  /* Clean Professional Buttons */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded font-medium transition-all duration-200 shadow-medium hover:shadow-large;
   }
 
-  .btn-subtle {
-    @apply bg-gradient-to-r from-secondary to-warm-gray text-secondary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-soft hover:shadow-elegant hover:scale-105;
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded font-medium transition-all duration-200 shadow-subtle hover:shadow-medium;
   }
 
-  .btn-outline-luxury {
-    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105;
+  .btn-outline {
+    @apply border border-primary text-primary bg-transparent px-6 py-3 rounded font-medium transition-all duration-200 hover:bg-primary hover:text-primary-foreground;
   }
 
-  /* Card Variants */
-  .card-luxury {
-    @apply bg-gradient-to-br from-card to-neutral-soft rounded-xl shadow-luxury border border-border/50 transition-all duration-300 hover:shadow-elegant hover:scale-[1.02];
+  /* Clean Card Styles */
+  .card-clean {
+    @apply bg-card rounded-lg shadow-subtle border border-border/50 transition-all duration-200 hover:shadow-medium;
   }
 
-  .card-glass {
-    @apply bg-card/80 backdrop-blur-sm rounded-xl shadow-soft border border-border/30 transition-all duration-300 hover:bg-card/90;
-  }
-
-  /* Text Styles */
-  .text-gradient-subtle {
-    @apply bg-gradient-to-r from-secondary to-warm-gray bg-clip-text text-transparent;
-  }
-
-  .text-gradient-charcoal {
-    @apply bg-gradient-to-r from-primary to-charcoal-light bg-clip-text text-transparent;
+  /* Remove All Gradients */
+  .text-clean {
+    @apply text-foreground;
   }
 
   /* Animations */

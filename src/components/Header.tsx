@@ -8,8 +8,8 @@ const Header = () => {
         <div className="flex items-center justify-center">
           {/* Centered Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/5 border border-border/30 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/10">
-              <span className="text-primary font-serif font-bold text-xl tracking-wide">FT</span>
+            <div className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-200 group-hover:shadow-lg">
+              <span className="font-serif font-bold text-xl tracking-wide">FT</span>
             </div>
           </Link>
 
