@@ -8,53 +8,53 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors - Luxury Palette */
-    --background: 36 23% 97%;
-    --foreground: 158 64% 15%;
+    /* Core Brand Colors - Sophisticated Adult Palette */
+    --background: 0 0% 98%;
+    --foreground: 220 13% 18%;
 
-    --card: 36 23% 97%;
-    --card-foreground: 158 64% 15%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 13% 18%;
 
-    --popover: 36 23% 97%;
-    --popover-foreground: 158 64% 15%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 13% 18%;
 
-    /* Primary: Deep Forest Green */
-    --primary: 158 64% 15%;
-    --primary-foreground: 36 23% 97%;
+    /* Primary: Deep Charcoal */
+    --primary: 220 13% 18%;
+    --primary-foreground: 0 0% 98%;
     
-    /* Secondary: Champagne Gold */
-    --secondary: 45 85% 52%;
-    --secondary-foreground: 158 64% 15%;
+    /* Secondary: Subtle Warm Gray */
+    --secondary: 30 5% 85%;
+    --secondary-foreground: 220 13% 18%;
 
-    /* Accent: Warm Cream */
-    --accent: 36 23% 92%;
-    --accent-foreground: 158 64% 15%;
+    /* Accent: Soft Neutral */
+    --accent: 220 7% 94%;
+    --accent-foreground: 220 13% 18%;
 
-    --muted: 36 15% 90%;
-    --muted-foreground: 158 20% 45%;
+    --muted: 220 7% 91%;
+    --muted-foreground: 220 9% 46%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 36 23% 97%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 36 15% 85%;
-    --input: 36 15% 85%;
-    --ring: 158 64% 15%;
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 220 13% 18%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom Luxury Variables */
-    --forest-deep: 158 64% 12%;
-    --forest-light: 158 40% 25%;
-    --gold-light: 45 85% 65%;
-    --gold-dark: 45 85% 40%;
-    --cream-warm: 36 35% 95%;
-    --cream-soft: 36 25% 92%;
+    /* Custom Sophisticated Variables */
+    --charcoal-deep: 220 15% 12%;
+    --charcoal-light: 220 10% 32%;
+    --warm-gray: 30 8% 88%;
+    --cool-gray: 220 8% 92%;
+    --neutral-light: 0 0% 96%;
+    --neutral-soft: 220 7% 94%;
 
     /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--forest-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--gold-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--forest-light) / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--cream-soft)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--charcoal-light)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--warm-gray)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--charcoal-light) / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--neutral-soft)));
 
     /* Shadows - Luxury Depth */
     --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.2);
@@ -140,13 +140,13 @@
 }
 
 @layer components {
-  /* Luxury Button Variants */
+  /* Sophisticated Button Variants */
   .btn-luxury {
-    @apply bg-gradient-to-r from-primary to-forest-light text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-luxury hover:shadow-elegant hover:scale-105;
+    @apply bg-gradient-to-r from-primary to-charcoal-light text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-luxury hover:shadow-elegant hover:scale-105;
   }
 
-  .btn-gold {
-    @apply bg-gradient-to-r from-secondary to-gold-light text-secondary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-gold hover:shadow-elegant hover:scale-105;
+  .btn-subtle {
+    @apply bg-gradient-to-r from-secondary to-warm-gray text-secondary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-soft hover:shadow-elegant hover:scale-105;
   }
 
   .btn-outline-luxury {
@@ -155,7 +155,7 @@
 
   /* Card Variants */
   .card-luxury {
-    @apply bg-gradient-to-br from-card to-cream-soft rounded-xl shadow-luxury border border-border/50 transition-all duration-300 hover:shadow-elegant hover:scale-[1.02];
+    @apply bg-gradient-to-br from-card to-neutral-soft rounded-xl shadow-luxury border border-border/50 transition-all duration-300 hover:shadow-elegant hover:scale-[1.02];
   }
 
   .card-glass {
@@ -163,12 +163,12 @@
   }
 
   /* Text Styles */
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-secondary to-gold-light bg-clip-text text-transparent;
+  .text-gradient-subtle {
+    @apply bg-gradient-to-r from-secondary to-warm-gray bg-clip-text text-transparent;
   }
 
-  .text-gradient-forest {
-    @apply bg-gradient-to-r from-primary to-forest-light bg-clip-text text-transparent;
+  .text-gradient-charcoal {
+    @apply bg-gradient-to-r from-primary to-charcoal-light bg-clip-text text-transparent;
   }
 
   /* Animations */
